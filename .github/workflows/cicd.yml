@@ -29,6 +29,6 @@ jobs:
       - name: Pull Image from docker hub
         run: sudo docker pull matias7132/springboot_react:latest
       - name: Delete old container
-        run: sudo docker rm -f springboot-example-container
+        run: docker rm -f springboot-example-container
       - name: Run docker container
-        run: sudo docker run -d -p 8080:8080 --name springboot-example-container matias7132/springboot_react
+        run: docker run -d -p 8080:8080 --name springboot-example-container matias7132/springboot_react
